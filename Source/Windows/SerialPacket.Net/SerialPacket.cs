@@ -51,7 +51,8 @@ namespace matsujirushi.IO.Ports
         /// </summary>
         public void Open()
         {
-            if (!_Port.IsOpen) _Port.Open();
+            if (_Port.IsOpen) return;
+            _Port.Open();
         }
 
         /// <summary>
@@ -59,6 +60,7 @@ namespace matsujirushi.IO.Ports
         /// </summary>
         public void Close()
         {
+            if (!_Port.IsOpen) return;
             _Port.Close();
         }
 
