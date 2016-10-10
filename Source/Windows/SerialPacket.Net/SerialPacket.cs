@@ -36,8 +36,6 @@ namespace matsujirushi.IO.Ports
 
             _Port = new SerialPort(portName, baudRate, parity, dataBits, stopBits);
             _Port.DataReceived += DataReceived;
-
-            _Port.ReceivedBytesThreshold = 1000;    // TODO ReceivedBytesThreshold
         }
 
         /// <summary>
