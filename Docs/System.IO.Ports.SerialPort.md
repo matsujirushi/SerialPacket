@@ -1,6 +1,6 @@
 # Class and NativeMethod
 
-```
+```c#
 public class SerialPort : System.ComponentModel.Component
 {
     private SerialStream internalSerialStream = null;
@@ -32,7 +32,7 @@ internal sealed class SerialStream : Stream
 
 # Call tree
 
-```
+```c#
 internal SerialStream(string portName, int baudRate, Parity parity, int dataBits, StopBits stopBits, int readTimeout, int writeTimeout, Handshake handshake, bool dtrEnable, bool rtsEnable, bool discardNull, byte parityReplace)
 	Thread eventLoopThread = new Thread(new ThreadStart(eventRunner.WaitForCommEvent));
 		internal unsafe void WaitForCommEvent()
